@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MedSerwis"
+    }
+  },
+  "defaultProject": "MedSerwis",
+  "cli": {
+    "analytics": false
+  }
 }

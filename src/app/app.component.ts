@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MedSerwis';
+  public alaData = 'Ala ma kota';
 }
+
