@@ -52,7 +52,7 @@ p {
 
 .content {
   display: flex;
-  margin: 60px auto 60px;
+  margin: 60px auto 10px;
   padding: 10px 0px;
   max-width: 1024px;
   flex-direction: column;
@@ -86,7 +86,7 @@ svg.material-icons:not(:last-child) {
   background-color: #fafafa;
   height: 10px;
   width: 150px;
-  margin: 0 8px 16px;
+  margin: 0 8px 0px;
   padding: 16px;
   display: flex;
   flex-direction: row;

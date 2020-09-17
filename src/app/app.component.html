@@ -8,23 +8,34 @@
   <span>Serwis Urządzeń Medycznych</span>
 </div>
 
+<input type="hidden" #selection>
+
 <div class="content" role="main">
   <p class="card-container">
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
+    <a class="card" rel="noopener" (click)="selection.value = 'zdarzenia'" tabindex="0">
       <span>Zdarzenia</span>
     </a>
-    <a class="card" target="_blank" rel="noopener" href="127.0.0.1:8080/medservice/zdarzenia/10046">
-      <span>Urządzenia</span>
+    <a class="card" rel="noopener" (click)="selection.value = 'przedmioty'" tabindex="0">
+      <span>Przedmioty</span>
     </a>
-    <a class="card" target="_blank" rel="noopener" href="https://blog.angular.io/">
+    <a class="card" rel="noopener" (click)="selection.value = 'raporty'" tabindex="0">
       <span>Raporty</span>
     </a>
+</div>
 
-  </div>
 
-<p>
-  <app-zdarzenie></app-zdarzenie>
-</p>
+<div  [ngSwitch]="selection.value">
+  <pre *ngSwitchDefault>Nie dokonano wyboru. Kliknij właściwy przycisk powyżej.</pre>
+  <pre *ngSwitchCase="'zdarzenia'"><app-lista-zdarzen></app-lista-zdarzen></pre>
+  <pre *ngSwitchCase="'przedmioty'">Ooops. Nie zaimplementowano sekcji: Przedmioty </pre>
+  <pre *ngSwitchCase="'raporty'">Ooops. Nie zaimplementowano sekcji: Raporty </pre>
+</div>
+
+<!--<p>-->
+<!--  <app-zdarzenie></app-zdarzenie>-->
+<!--  &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--  <app-lista-zdarzen></app-lista-zdarzen>-->
+<!--</p>-->
 
 
 
